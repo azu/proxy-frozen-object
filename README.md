@@ -5,6 +5,7 @@ ES Proxy for `Object.freeze(object)`.
 Following proxy does not work correctly, `proxy-frozen-object` provide workaround.
 
 ```js
+// DOES NOT WORK CORRECTLY
 new Proxy(Object.freeze(object), { ... });
 ```
 
