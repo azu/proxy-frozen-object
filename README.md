@@ -7,7 +7,6 @@ ES Proxy for `Object.freeze(object)`.
 [ES Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) can not proxy frozen object directly.
 
 Following example throw an `TypeError`.
-Because, ES Proxy can not proxy for `Object.freeze(object)` directly. 
 
 > TypeError: proxy must report the same value for the non-writable, non-configurable property '"hello"'
 
