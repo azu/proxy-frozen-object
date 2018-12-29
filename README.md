@@ -6,7 +6,7 @@ Following proxy does not work correctly, `proxy-frozen-object` provide workaroun
 
 ```js
 // DOES NOT WORK CORRECTLY
-new Proxy(Object.freeze(object), { ... });
+const proxied = new Proxy(Object.freeze(object), { ... });
 ```
 
 ## Why this library is needed?
