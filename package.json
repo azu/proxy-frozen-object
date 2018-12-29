@@ -1,6 +1,6 @@
 {
   "name": "proxy-frozen-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ES Proxy for `Object.freeze(object)`.",
   "keywords": [
     "es-proxy",
