@@ -2,6 +2,12 @@
 
 ES Proxy for `Object.freeze(object)`.
 
+Following proxy does not work correctly, `proxy-frozen-object` provide workaround.
+
+```js
+new Proxy(Object.freeze(object), { ... });
+```
+
 ## Why this library is needed?
 
 [ES Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) can not proxy frozen object **directly**.
