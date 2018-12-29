@@ -4,7 +4,7 @@ ES Proxy for `Object.freeze(object)`.
 
 ## Why this library is needed?
 
-[ES Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) can not proxy frozen object directly.
+[ES Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) can not proxy frozen object **directly**.
 
 Following example throw an `TypeError`.
 
@@ -35,9 +35,10 @@ console.log(proxied.hello()); // TypeError: proxy must report the same value for
 ## How to resolve this issue?
 
 This library that create an proxy for dummy object.
-It is means that does not proxy `myObject` directly.
 
-It Proxy `myObject` indirectly for avoiding `TypeError`.
+It is means that this library proxy `myObject` **indirectly**.
+
+Following example proxy `myObject` indirectly for avoiding `TypeError`.
 
 ```js
 const myObject = {
