@@ -73,6 +73,7 @@ console.log(proxied.hello()); // "Hi!"
 console.log(proxied.bye()); // "Bye!"
 ```
 
+`proxy-frozen-object` do proxy the target indirectly.
 
 ## Install
 
