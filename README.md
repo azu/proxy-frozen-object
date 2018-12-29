@@ -1,4 +1,4 @@
-# proxy-frozen-object
+# proxy-frozen-object [![Build Status](https://travis-ci.org/azu/proxy-frozen-object.svg?branch=master)](https://travis-ci.org/azu/proxy-frozen-object)
 
 ES Proxy for `Object.freeze(object)`.
 
