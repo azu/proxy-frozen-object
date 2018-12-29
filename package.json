@@ -1,0 +1,70 @@
+{
+  "name": "proxy-frozen-object",
+  "version": "1.0.0",
+  "description": "ES Proxy for `Object.freeze(object)`.",
+  "keywords": [
+    "es-proxy",
+    "esproxy",
+    "frozen",
+    "object.freeze",
+    "proxy"
+  ],
+  "homepage": "https://github.com/azu/proxy-frozen-object",
+  "bugs": {
+    "url": "https://github.com/azu/proxy-frozen-object/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/proxy-frozen-object.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/proxy-frozen-object.js",
+  "types": "lib/proxy-frozen-object.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "watch": "tsc -p . --watch"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "cross-env": "^5.2.0",
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "ts-node-test-register": "^4.0.0",
+    "typescript": "^3.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
