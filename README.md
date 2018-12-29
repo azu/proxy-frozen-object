@@ -102,7 +102,7 @@ const proxied = createProxyForFrozenObject(myObject, {
     }
 });
 
-assert.strictEqual(proxied.hello(), "Hi!");
+console.log(proxied.hello()); //  "Hi!"
 ```
 
 ## Changelog
